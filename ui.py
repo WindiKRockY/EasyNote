@@ -113,7 +113,7 @@ class Ui_main_w(object):
         self.delatenote_btn.setText(_translate("main_w", "DELATE"))
         self.createnote_btn.setText(_translate("main_w", "CREATE"))
         self.deleteteg_btn.setText(_translate("main_w", "DELATE TEG"))
-        self.saveteg_btn.setText(_translate("main_w", "SAVE TEG"))
+        self.saveteg_btn.setText(_translate("main_w", "SEARCH TEG"))
         self.createteg_btn.setText(_translate("main_w", "CREATE TEG"))
 
 

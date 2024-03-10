@@ -213,7 +213,7 @@ border -radiius:5px;</string>
 border -radiius:5px;</string>
     </property>
     <property name="text">
-     <string>SAVE TEG</string>
+     <string>SEARCH TEG</string>
     </property>
    </widget>
    <widget class="QPushButton" name="createteg_btn">

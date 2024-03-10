@@ -17,6 +17,7 @@ class Widget(QMainWindow):
         self.ui.delatenote_btn.clicked.connect(self.delete_note)
         self.ui.createteg_btn.clicked.connect(self.add_tag)
         self.ui.deleteteg_btn.clicked.connect(self.delete_teg)
+        self.ui.saveteg_btn.clicked.connect(self.search_by_teg)
 
     def show_note(self):
         self.name = self.ui.list_wid.selectedItems()[0].text()
@@ -82,7 +83,18 @@ class Widget(QMainWindow):
                 self.notes[self.name]["Tegs"].remove(tag_name)
                 self.ui.teg_wid.clear()
                 self.ui.teg_wid.addItems(self.notes[self.name]["Tegs"])
+    
+    def search_by_teg(self):
+        tag = self.ui.findteg_btn.text()
+        if tag:
+            matching_notes = []
+            for note_name in self.notes:
+                if tag in self.notes[note_name]["Tegs"]:
+                    matching_notes.append(note_name)
         
+        self.ui.list_wid.clear()
+        self.ui.list_wid.addItems(matching_notes)
+
 app = QApplication([])
 ex = Widget()
 ex.show()
